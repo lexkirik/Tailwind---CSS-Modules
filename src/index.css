@@ -1,5 +1,11 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @theme {
   --color-mint-500: oklch(0.72 0.11 178);
   --color-regal-blue: #243c5a;
+}
+@layer components {
+  .background {
+    @apply absolute bg-gradient-to-t from-gray-900 via-gray-700 to-gray-300 inset-0 opacity-40 rounded-md;
+  }
 }

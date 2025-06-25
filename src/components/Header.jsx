@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import NavMenuLink from "../UI/NavLinkMenu";
 
 function Header() {
   return (
@@ -7,20 +8,14 @@ function Header() {
       {/* <h1 className="flex mb-5 text-4xl text-red-900">Header</h1> */}
       <nav>
         <ul className="flex gap-14">
-          <li className="mb-4">
-            <NavLink className="font-semibold" to={"/"}>
-              Home
-            </NavLink>
+          <li>
+            <NavMenuLink to={"/"}>Home</NavMenuLink>
           </li>
-          <li className="">
-            <NavLink className="font-semibold" to={"/about"}>
-              About
-            </NavLink>
+          <li>
+            <NavMenuLink to={"/about"}>About</NavMenuLink>
           </li>
-          <li className="">
-            <NavLink className="font-semibold" to={"/cart"}>
-              Cart
-            </NavLink>
+          <li>
+            <NavMenuLink to={"/cart"}>Cart</NavMenuLink>
           </li>
         </ul>
       </nav>
