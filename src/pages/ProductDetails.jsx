@@ -9,16 +9,25 @@ function ProductDetails() {
   console.log(product);
 
   return (
-    <div>
+    <div className="py-10 px-6">
       {product ? (
         <>
-          <h1>Product Details</h1>
-          <h2>{product.name}</h2>
-          <p>Price: {product.price}$</p>
-          <img src={product.img} alt={product.name} style={{ width: "150px" }} />
+          <h1 className="text-3xl font-semibold text-center mb-6">
+            Product Details
+          </h1>
+          <div className="flex flex-col items-center rounded-md bg-white p-6">
+            <h2 className="text-xl mb-2 font-semibold">{product.name}</h2>
+            <p className="text-lg text-gray-700">Price: {product.price}$</p>
+            <img
+              className="w-40 h-40 mb-4 rounded-md"
+              src={product.img}
+              alt={product.name}
+              style={{ width: "150px" }}
+            />
+          </div>
         </>
       ) : (
-        <p>Not Found</p>
+        <p className="text-center text-red-500 text-xl font-bold">Not Found</p>
       )}
     </div>
   );

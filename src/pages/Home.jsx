@@ -16,7 +16,7 @@ function Home() {
               className="relative flex flex-col items-center justify-center group"
               to={`/category/${category.name}`}
             >
-              <span className="absolute font-semibold text-white text-xl z-10 group-hover:text-red-500 transition-all animate-bounce">
+              <span className="absolute font-semibold text-white text-xl z-10  transition-all animate-bounce">
                 {category.name}
               </span>
               <img
